@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <title>Contactos App</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="apple-touch-icon" href="./icons/apple-icon-180.png">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Contactos App
+        </h1>
+        <form id="form">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="tel" id="telefono" name="telefono" placeholder="(10 digitos) telefono" required minlength="10"
+                maxlength="10">
+            <input type="submit" id="submit" value="Guardar Contacto">
+        </form>
+    </header>
+
+    <main>
+        <section class="list">
+            <h2>Contactos</h2>
+            <div id="list">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- <script src="./dist/dexie.js"></script> -->
+    <script src="https://unpkg.com/dexie/dist/dexie.js"></script>
+    <script src="./index.js"></script>
+
+    <script>
+        // service worker registration
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
+</body>
+
+</html>
