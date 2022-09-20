@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea JS</title>
+
+    <style>
+        th,
+        td {
+            border-style: solid;
+            border-color: #96D4D4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Tarea ejercicios JS</h1>
+
+    <section id="p1">
+        <h2>Ejercicio 1 : Desarrollo Formula General</h2>
+        <form id="form-formula">
+            <label for="a">Valor de a</label>
+            <input type="number" name="a" id="a">
+            <label for="b">Valor de b</label>
+            <input type="number" name="b" id="b">
+            <label for="c">Valor de c</label>
+            <input type="number" name="c" id="c">
+            <button type="submit">Calcular</button>
+        </form>
+        <br>
+        <div>
+            <span id="result"></span>
+        </div>
+    </section>
+    <hr>
+
+    <section id="p2">
+        <h2>Juego Piedra Papel o Tijera</h2>
+        <form id="form-ppt">
+            <label for="ppt">Elige una opción</label>
+            <select name="ppt" id="ppt">
+                <option value="piedra">Piedra</option>
+                <option value="papel">Papel</option>
+                <option value="tijera">Tijera</option>
+            </select>
+            <button type="submit">Jugar</button>
+        </form>
+        <br>
+        <div>
+            <p id="elecciones-ppt"></p>
+            <span id="result-ppt"></span>
+        </div>
+    </section>
+    <hr>
+
+    <section id="p3">
+        <h2>Datos desde tu cumple</h2>
+        <form id="form-cumple">
+            <label for="cumple">Fecha de nacimiento</label>
+            <input type="date" name="cumple" id="cumple">
+            <button type="submit">Calcular</button>
+        </form>
+        <br>
+        <div>
+            <span id="result-cumple"></span>
+        </div>
+    </section>
+    <hr>
+
+    <section id="p4">
+        <h2>JSON Placeholder</h2>
+        <form id="form-json">
+            <label for="json">Username del usuario</label>
+            <input type="text" name="json" id="json">
+            <button type="submit">Buscar</button>
+            <br>
+            <button type="submit" id="json-fetch-all">Traer 10</button>
+        </form>
+        <br>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="json-tbody">
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
