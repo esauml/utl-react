@@ -1,0 +1,10 @@
+
+# escpae OS X generated files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# escoae any compressed files
+*.gz
+*.bz2
+*.zip
