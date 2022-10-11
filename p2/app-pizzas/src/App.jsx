@@ -9,7 +9,7 @@ const App = () => {
 
     const updatePedidos = (pedido) => {
         console.log('updatePedidos', pedido);
-        setPedidos([...pedidos, pedido]);
+        setPedidos([pedido]);
     }
 
     return (

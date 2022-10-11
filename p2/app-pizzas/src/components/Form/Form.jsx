@@ -14,7 +14,7 @@ const Form = ({ updateState }) => {
         const { type, quantity, payment, name, phone, address } = data;
 
         // clean the form
-        // e.target.reset();
+        e.target.reset();
 
         updateState({ type, quantity, payment, name, phone, address });
     }

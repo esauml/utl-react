@@ -24,7 +24,7 @@ const createContainer = (pedidos) => {
                 <p>Teléfono: {phone}</p>
                 <p>Tipo de pizza: {type}</p>
                 <p>Cantidad: {quantity}</p>
-                <p>Forma de pagamento: {payment}</p>
+                <p>Forma de pago: {payment}</p>
                 <p>Total a pagar: {cost}</p>
             </div>
         );
