@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import React from 'react'
 
 // add a hr between each item of the array
@@ -24,7 +25,7 @@ const createContainer = (pedidos) => {
                 <p>Tipo de pizza: {type}</p>
                 <p>Cantidad: {quantity}</p>
                 <p>Forma de pagamento: {payment}</p>
-                <p>Total a pagar: { cost }</p>
+                <p>Total a pagar: {cost}</p>
             </div>
         );
     });
@@ -49,10 +50,10 @@ const valueMaps = {
 
 const Pedidos = ({ pedidos }) => {
     return (
-        <>
+        <Container>
             <h2>Pedidos</h2>
-            { pedidos && pedidos.length > 0 ? createContainer(pedidos) : <p>No hay pedidos</p> }
-        </>
+            {pedidos && pedidos.length > 0 ? createContainer(pedidos) : <p>No hay pedidos</p>}
+        </Container>
     );
 };
 
