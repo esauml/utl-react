@@ -105,8 +105,8 @@ Recomiendo usar la herramienta pwa-asset-generator para crear los iconos
 npx pwa-asset-generator favicon.png public/icons -v icons
 ```
 
-2. agrega a public una carpeta llamada icons
-3. arroja los referencias de los iconos en el log de la terminal (recuerdo esto)
+Esto agrega una carpeta llamada "icons" en public.
+IMPORTANTE: También arroja un log con el array de iconos 
 
 ejemplo de log
 
@@ -141,7 +141,8 @@ ejemplo de log
 
 ## 4. Modificar el vite.config.js
 
-crear un objeto const con la configuracion
+crear un objeto const con la configuracion y agregar al plugin
+IMPORTANTE: ver bien mis comentarios sobre los iconos y lo demás dejar igual
 
 ```js
 import { defineConfig } from 'vite'
