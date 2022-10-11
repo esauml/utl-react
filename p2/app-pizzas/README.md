@@ -5,6 +5,7 @@
   - [2. crear los componentes ReloadPrompt](#2-crear-los-componentes-reloadprompt)
     - [2.1 Componente css](#21-componente-css)
     - [2.2 Componente js](#22-componente-js)
+    - [2.3 Agregar el componente a main.jsx](#23-agregar-el-componente-a-mainjsx)
   - [3. crear los iconos](#3-crear-los-iconos)
   - [4. Modificar el vite.config.js](#4-modificar-el-viteconfigjs)
   - [5. Modificar el index.html](#5-modificar-el-indexhtml)
@@ -104,6 +105,10 @@ function ReloadPrompt() {
 
 export default ReloadPrompt
 ```
+
+### 2.3 Agregar el componente a main.jsx
+
+Se debe agregar al componente debajo de 
 
 ## 3. crear los iconos
 

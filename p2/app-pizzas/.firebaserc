@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "utl-app-juegos"
+  },
+  "targets": {
+    "utl-app-juegos": {
+      "hosting": {
+        "app-pizzas": [
+          "app-pizzas"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
