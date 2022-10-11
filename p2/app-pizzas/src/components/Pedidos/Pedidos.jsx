@@ -43,8 +43,8 @@ const valueMaps = {
         vegie: 150,
     },
     payment: {
-        credit: 1,
-        paypal: 1,
+        credit: 1.1,
+        paypal: 1.2,
     },
 };
 
