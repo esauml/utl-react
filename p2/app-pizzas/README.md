@@ -1,5 +1,16 @@
 # Pasos para crear la pwa
 
+- [Pasos para crear la pwa](#pasos-para-crear-la-pwa)
+  - [1. instalar el paquete](#1-instalar-el-paquete)
+  - [2. crear los componentes ReloadPrompt](#2-crear-los-componentes-reloadprompt)
+    - [2.1 Componente css](#21-componente-css)
+    - [2.2 Componente js](#22-componente-js)
+  - [3. crear los iconos](#3-crear-los-iconos)
+  - [4. Modificar el vite.config.js](#4-modificar-el-viteconfigjs)
+  - [5. Modificar el index.html](#5-modificar-el-indexhtml)
+  - [6. Ejectuar el build](#6-ejectuar-el-build)
+  - [7. Ejecutar el servidor](#7-ejecutar-el-servidor)
+
 ## 1. instalar el paquete
 
 instalar con `npm i vite-plugin-pwa`
@@ -101,12 +112,13 @@ Agrega un icono a la raiz del proyecto llamado favicon.png o "recuerda cambiar l
 Recomiendo usar la herramienta pwa-asset-generator para crear los iconos
 
 1. En terminal a la raiz del proyecto
+
 ```bash
 npx pwa-asset-generator favicon.png public/icons -v icons
 ```
 
 Esto agrega una carpeta llamada "icons" en public.
-IMPORTANTE: También arroja un log con el array de iconos 
+IMPORTANTE: También arroja un log con el array de iconos
 
 ejemplo de log
 
@@ -200,7 +212,7 @@ export default defineConfig({
 
 ## 5. Modificar el index.html
 
-Se debe agregar al html raiz unos fragementos de codigo en el head. 
+Se debe agregar al html raiz unos fragementos de codigo en el head.
 
 IMPORTANTE: aquí no va nada del manifest ni del service worker. Esto lo genera el plugin en el build
 
@@ -242,13 +254,14 @@ Ejemplo completo de mi html
 
 </html>
 ```
-# 6. Ejectuar el build
+
+## 6. Ejectuar el build
 
 ```bash
 npm run build
 ```
 
-# 7. Ejecutar el servidor 
+## 7. Ejecutar el servidor
 
 Instalar servidor
 
