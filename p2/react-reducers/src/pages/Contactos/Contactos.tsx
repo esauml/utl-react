@@ -1,4 +1,4 @@
-import { TableContactos } from "./components";
+import { Formulario, TableContactos } from "./components";
 
 export interface ContactosInterface { };
 
@@ -23,6 +23,7 @@ const contactos = [
 const Contactos = ({ }: ContactosInterface) => {
     return (
         <div className="container mt-3">
+            <Formulario />
             <TableContactos contactos={contactos} />
         </div>
     )

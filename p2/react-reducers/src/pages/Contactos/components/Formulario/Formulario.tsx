@@ -13,7 +13,9 @@ const Formulario = ({ }: FormularioInterface) => {
                 Número: {" "}
                 <input type="text" className="form-control" />
             </label>
-            <button className="btn btn-primary">Agregar</button>
+            <label className="mx-1 d-grid gap-2">
+                <button className="btn btn-primary">Agregar</button>
+            </label>
         </div>
     )
 };
