@@ -1,3 +1,5 @@
+import { useReducer } from "react";
+import ContactosReducer from "../../reducers/ContactosReducer";
 import { Formulario, TableContactos } from "./components";
 
 export interface ContactosInterface { };
@@ -21,10 +23,13 @@ const contactos = [
 ];
 
 const Contactos = ({ }: ContactosInterface) => {
+    const [state, dispatch] = useReducer(ContactosReducer, contactos);
+    console.log(state);
+
     return (
         <div className="container mt-3">
-            <Formulario />
-            <TableContactos contactos={contactos} />
+            <Formulario dispatch={dispatch} />
+            <TableContactos contactos={state} />
         </div>
     )
 };

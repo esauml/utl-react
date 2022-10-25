@@ -7,6 +7,7 @@ const contactosReducerTypes = {
 const ContactosReducer = (state: any[], action: { type: any; payload: any; }) => {
     switch (action.type) {
         case contactosReducerTypes.ADD_CONTACTO:
+            console.log("User Added Successfully");
             return [...state, action.payload];
 
         default:
