@@ -26,7 +26,7 @@ const TableContactos = ({ contactos = [] }: TableContactosInterface) => {
                     const idFinal = typeof contacto.id;
                     console.log(idFinal);
                     return (<tr key={contacto.id}>
-                        <th scope="row">{contacto.id.split('')}</th>
+                        <th scope="row">{contacto.id.split('-')[0]}</th>
                         <td>{contacto.nombre}</td>
                         <td>{contacto.numero}</td>
                         <td>
