@@ -1,7 +1,9 @@
 import React from "react";
+import { contactosReducerTypes } from "../../../../reducers";
 
 export interface TableContactosInterface {
     contactos: ContactoType[];
+    dispatch: React.Dispatch<any>;
 }
 
 type ContactoType = {
@@ -10,7 +12,16 @@ type ContactoType = {
     numero: string
 }
 
-const TableContactos = ({ contactos = [] }: TableContactosInterface) => {
+const TableContactos = ({ contactos = [], dispatch }: TableContactosInterface) => {
+
+    const handleDelete = (e: React.MouseEvent<HTMLButtonElement>) => {
+        const id = e.currentTarget.getAttribute("data-id");
+        dispatch({
+            type: contactosReducerTypes.DELETE_CONTACTO,
+            payload: id
+        });
+    }
+
     return (
         <table className="table table-striped">
             <thead>
@@ -23,14 +34,12 @@ const TableContactos = ({ contactos = [] }: TableContactosInterface) => {
             </thead>
             <tbody>
                 {contactos.map((contacto) => {
-                    const idFinal = typeof contacto.id;
-                    console.log(idFinal);
                     return (<tr key={contacto.id}>
                         <th scope="row">{contacto.id.split('-')[0]}</th>
                         <td>{contacto.nombre}</td>
                         <td>{contacto.numero}</td>
                         <td>
-                            <button className="btn btn-danger">Eliminar</button>
+                            <button onClick={handleDelete} data-id={contacto.id} className="btn btn-danger">Eliminar</button>
                         </td>
                     </tr>)
                 })}
