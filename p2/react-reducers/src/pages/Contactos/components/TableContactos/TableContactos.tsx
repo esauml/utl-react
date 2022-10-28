@@ -1,7 +1,13 @@
 import React from "react";
 
 export interface TableContactosInterface {
-    contactos: Array<any>
+    contactos: ContactoType[];
+}
+
+type ContactoType = {
+    id: string,
+    nombre: string,
+    numero: string
 }
 
 const TableContactos = ({ contactos = [] }: TableContactosInterface) => {
@@ -16,16 +22,18 @@ const TableContactos = ({ contactos = [] }: TableContactosInterface) => {
                 </tr>
             </thead>
             <tbody>
-                {contactos.map((contacto: any) => (
-                    <tr key={contacto.id}>
-                        <th scope="row">{contacto.id}</th>
+                {contactos.map((contacto) => {
+                    const idFinal = typeof contacto.id;
+                    console.log(idFinal);
+                    return (<tr key={contacto.id}>
+                        <th scope="row">{contacto.id.split('')}</th>
                         <td>{contacto.nombre}</td>
                         <td>{contacto.numero}</td>
                         <td>
                             <button className="btn btn-danger">Eliminar</button>
                         </td>
-                    </tr>
-                ))}
+                    </tr>)
+                })}
             </tbody>
         </table>
     )

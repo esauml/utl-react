@@ -6,17 +6,17 @@ export interface ContactosInterface { };
 
 const contactos = [
     {
-        id: 1,
+        id: "1",
         nombre: "Juan",
         numero: "123456789"
     },
     {
-        id: 2,
+        id: "2",
         nombre: "Pedro",
         numero: "987654321"
     },
     {
-        id: 3,
+        id: "3",
         nombre: "Maria",
         numero: "123456789"
     }
