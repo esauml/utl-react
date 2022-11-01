@@ -1,9 +1,9 @@
 
-import React from 'react';
-import { useReducer } from 'react';
-import UserReducer from './UserReducer';
-import UserContext from './UserContext';
 import axios from 'axios';
+import React, { useReducer } from 'react';
+import { GET_PROFILE, GET_USERS } from './types';
+import UserContext from './UserContext';
+import UserReducer from './UserReducer';
 
 const UserState = ({ children }) => {
 
@@ -16,12 +16,20 @@ const UserState = ({ children }) => {
 
     const getUsers = async () => {
         const response = await axios.get('https://reqres.in/api/users');
-        console.log(response);
+
+        dispatch({
+            type: GET_USERS,
+            payload: response.data.data,
+        });
     };
 
     const getProfile = async (id) => {
         const response = await axios.get(`https://reqres.in/api/users/${id}`);
-        console.log(response);
+
+        dispatch({
+            type: GET_PROFILE,
+            payload: response.data.data,
+        });
     };
 
     return (
@@ -31,7 +39,7 @@ const UserState = ({ children }) => {
             getUsers,
             getProfile,
         }} >
-            {props.children}
+            {children}
         </UserContext.Provider>
     );
 };
