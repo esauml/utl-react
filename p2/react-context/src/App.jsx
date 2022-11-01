@@ -1,9 +1,12 @@
+import { Profile, UserList } from './components'
 
 const App = () => {
 
   return (
-    <div className="App">
-      App
+    <div>
+      <h1>React Context</h1>
+      <UserList />
+      <Profile />
     </div>
   )
 }
