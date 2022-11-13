@@ -1,5 +1,13 @@
+import { Participantes } from "./pages";
+
 const App = () => {
-  return <div>Hello World</div>
+
+  return (
+    <>
+      <h1>My App</h1>
+      <Participantes />
+    </>
+  )
 };
 
 export default App;
