@@ -1,5 +1,5 @@
-import { useReducer } from "react";
-import { List } from "../../components";
+import { useReducer, useState } from "react";
+import { Form, List } from "../../components";
 import Reducer from "../../reducers/ContactosReducer";
 import { Contacto } from "../../types/Contacto";
 import { getLocalStorage } from "../../utilities/localstorage.utility";
@@ -9,26 +9,12 @@ const initState = () => JSON.parse(getLocalStorage('asistentes') as string) || i
 
 const ParticipantesPage = () => {
     const [state, dispatch] = useReducer(Reducer, initState, initState);
+    const [stateModal, setStateModal] = useState(false);
     console.log('state', state);
-
-    const addContacto = () => {
-        const contacto = {
-            id: state.contactos?.length + 1 || 1,
-            nombre: 'Nombre',
-            apellidos: 'Apellidos',
-            email: 'email@email.com',
-            twitter: '@twitter',
-            avatar: 'https://picsum.photos/200/300'
-        }
-        dispatch({ type: 'ADD_CONTACTO', payload: contacto });
-    }
 
     return (
         <>
-            <p>
-                Form
-                <button onClick={() => addContacto()}>Add</button>
-            </p>
+            <Form state={state} dispatch={dispatch} stateModal={stateModal} setStateModal={setStateModal} />
             <List state={state} />
         </>
     )
