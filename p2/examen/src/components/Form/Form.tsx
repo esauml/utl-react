@@ -10,6 +10,12 @@ export interface FormInterface {
     state: any;
 }
 
+export const avatarImgs = {
+    avatar1: 'https://picsum.photos/id/237/200/300',
+    avatar2: 'https://picsum.photos/id/238/200/300',
+    avatar3: 'https://picsum.photos/id/239/200/300',
+}
+
 const Form = ({ stateModal, setStateModal, dispatch, state }: FormInterface) => {
     const open = stateModal;
 
@@ -141,9 +147,9 @@ const Form = ({ stateModal, setStateModal, dispatch, state }: FormInterface) => 
                         <br /><br />
 
                         <div style={{ display: 'flex', justifyContent: 'center' }}>
-                            {radioAvatar('avatar1', 'https://picsum.photos/id/237/200/300')}
-                            {radioAvatar('avatar2', 'https://picsum.photos/id/238/200/300')}
-                            {radioAvatar('avatar3', 'https://picsum.photos/id/239/200/300')}
+                            {radioAvatar('avatar1', avatarImgs.avatar1)}
+                            {radioAvatar('avatar2', avatarImgs.avatar2)}
+                            {radioAvatar('avatar3', avatarImgs.avatar3)}
                         </div>
 
                         <br /><br />
